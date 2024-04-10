@@ -1,0 +1,27 @@
+Average User Profile,Task-1.1,,Scenarios,Task-2.1
+Low Cognitive load HR,69.3656,,Low Cognitive Workload Scenarios,72
+Low Cognitive load RR,15.1503,,High Cognitive Workload Scenarios,28
+High Cognitive load HR,83.937,,Scenarios,1  2  1  2  1  1  1  1  1  2  1  1  1  1  1  1  2  1  1  2  2  1  1  1  1  1  1  2  1  1  1  1  1  1  1  1  1  2  1  2  1  1  1  1  1  2  1  1  1  1  2  1  1  1  2  1  2  2  1  1  1  1  2  1  2  1  2  1  2  1  2  2  1  2  1  1  2  1  1  2  1  2  2  1  1  1  1  2  1  1  1  2  1  1  1  1  2  1  1  1  1
+High Cognitive load RR,20.9439,,,
+,,,Speed Samples,Task-2.2
+Reaction time,Task-1.2,,Speed Values,20  20.404  20.808  21.212  21.616  22.02  22.424  22.828  23.232  23.636  24.04  24.444  24.848  25.252  25.656  26.06  26.464  26.868  27.272  27.676  28.08  28.484  28.888  29.292  29.696  30.1  30.504  30.908  31.312  31.716  32.12  32.524  32.928  33.332  33.736  34.14  34.544  34.948  35.352  35.756  36.16  36.564  36.968  37.372  37.776  38.18  38.584  38.988  39.392  39.796  40.2  40.604  41.008  41.412  41.816  42.22  42.624  43.028  43.432  43.836  44.24  44.644  45.048  45.452  45.856  46.26  46.664  47.068  47.472  47.876  48.28  48.684  49.088  49.492  49.896  50.3  50.704  51.108  51.512  51.916  52.32  52.724  53.128  53.532  53.936  54.34  54.744  55.148  55.552  55.956  56.36  56.764  57.168  57.572  57.976  58.38  58.784  59.188  59.592  59.996
+Low Cognitive load TR,0.045785,,Step Size,0.404
+High Cognitive load TR,0.040077,,,
+,,,Tuned Parameters,Task-2.3
+Gain,Task-1.3,,Heart Rate,71.8735
+Low Cognitive Gain,85000,,Respiratory Rate,19.6763
+High Cognitive Gain,100000,,Resiratory Quotient,3.6528
+,,,Reaction Time,0.4566
+Number of Switches,Task-1.4,,,
+Low Cognitive load,1,,Collision Count,Task2.4
+High Cognitive load,1,,No of Collisions in low cognitive work load,0
+,,,No of Collisions in high cognitive work load,0
+,,,Low Cognitive load collision status,no
+Final Gain,Task3.1,,High Cognitive load collision status,no
+Best gain - Low Cognitive Workload,110000,,,
+Best gain - High Cognitive Workload,200000,,Switches Count,Task2.5
+,,,No of Switches in low cognitive work load,32
+,,,No of Switches in high cognitive work load,18
+,,,,
+,,,Reaction Time Setting,Task2.6
+,,,Value,12.5

@@ -1,0 +1,13 @@
+{
+	"road_condition": [
+		{
+			"ans": [
+				{
+					"text":"Relax",
+					"status" : "OK"
+				}
+			]
+		}
+	],
+	"status": "OK"
+}

@@ -1,0 +1,56 @@
+[System]
+Name='KavyaChandrikaVempalli'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=12
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='deceleration'
+Range=[-100 0]
+NumMFs=3
+MF1='low':'gaussmf',[19.04 -100]
+MF2='medium':'gaussmf',[19.04 -49.56]
+MF3='high':'gaussmf',[19.04 0]
+
+[Input2]
+Name='distance'
+Range=[-25 10]
+NumMFs=2
+MF1='near':'gaussmf',[11.14 -25]
+MF2='far':'gaussmf',[11.14 10]
+
+[Input3]
+Name='road_condition'
+Range=[-20 22]
+NumMFs=2
+MF1='poor':'gaussmf',[12.6 -20]
+MF2='normal':'gaussmf',[12.6 22]
+
+[Output1]
+Name='deceleration_B'
+Range=[-300 0]
+NumMFs=3
+MF1='low':'gaussmf',[53.09 -300]
+MF2='medium':'gaussmf',[53.07 -150]
+MF3='high':'gaussmf',[53.05 0]
+
+[Rules]
+1 1 1, 2 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 1 (1) : 1
+2 1 1, 3 (1) : 1
+2 1 2, 2 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+3 1 1, 3 (1) : 1
+3 1 2, 3 (1) : 1
+3 2 1, 3 (1) : 1
+3 2 2, 3 (1) : 1

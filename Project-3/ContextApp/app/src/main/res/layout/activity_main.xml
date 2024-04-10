@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_heartrate"
+        android:layout_width="203dp"
+        android:layout_height="49dp"
+        android:hint="Heart Rate"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.44"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_view"
+        app:layout_constraintVertical_bias="0.120000005" />
+
+    <TextView
+        android:id="@+id/tvRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rec"
+        android:textColor="#4CAF50"
+        app:layout_constraintEnd_toEndOf="@+id/camera_view"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/camera_view"
+        app:layout_constraintTop_toTopOf="@+id/camera_view" />
+
+    <Button
+        android:id="@+id/btn_symptoms"
+        android:layout_width="177dp"
+        android:layout_height="55dp"
+        android:text="SYMPTOMS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/camera_view"
+        android:layout_width="174dp"
+        android:layout_height="189dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116">
+
+    </androidx.camera.view.PreviewView>
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="177dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="24dp"
+        android:text="UPLOAD SIGNS"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_symptoms"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_symptoms"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_heart_rate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MEASURE HEART RATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/btn_Respiratoryrate"
+        app:layout_constraintTop_toBottomOf="@+id/tv_heartrate"
+        app:layout_constraintVertical_bias="0.07999998" />
+
+    <Button
+        android:id="@+id/btn_Respiratoryrate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="MEASURE RESPIRATORY RATE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Respiratoryrate"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/tv_Respiratoryrate"
+        android:layout_width="203dp"
+        android:layout_height="49dp"
+        android:hint="Respiratory Rate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_heartrate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tv_heartrate"
+        app:layout_constraintTop_toBottomOf="@+id/btn_heart_rate"
+        app:layout_constraintVertical_bias="0.155" />
+
+    <ImageView
+        android:id="@+id/btn_Record"
+        android:layout_width="36dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_view"
+        app:layout_constraintEnd_toEndOf="@+id/camera_view"
+        app:layout_constraintStart_toStartOf="@+id/camera_view"
+        app:srcCompat="@drawable/record_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

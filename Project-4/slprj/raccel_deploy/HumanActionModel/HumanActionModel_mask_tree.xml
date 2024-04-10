@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MF0 version="1.1" packageUris="http://schema.mathworks.com/mf0/SlsaMaskTree/R2020a">
+  <slsa.mm.maskTree.MaskTree type="slsa.mm.maskTree.MaskTree" uuid="a4d9a824-73ce-4da6-96ca-d7c30a961e33">
+    <maskedBlocks type="slsa.mm.maskTree.MaskedBlock" uuid="33e9870e-b094-4fa8-aeb9-5c6164ee817c">
+      <id>root</id>
+    </maskedBlocks>
+    <flags type="slsa.mm.maskTree.MaskTreeFlags" uuid="b2f5424a-15b8-439a-b431-d74da2651ab9"/>
+  </slsa.mm.maskTree.MaskTree>
+</MF0>

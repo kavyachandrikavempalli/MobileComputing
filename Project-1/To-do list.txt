@@ -1,0 +1,18 @@
+To-do list:
+
+1. In heart rate on click listener
+	1. Flash On
+	2. Record
+	3. store and load
+	4. HearRate Calculation Function
+2. In Respiratory rate on click listener
+	1. Take CSV Data
+	2. Store Function
+	3. RespiratoryRate Calculate Function
+3. In Button Upload on click listener
+	1. Respiratory rate and heart rate store -> Go to activity2
+4. Tasks in Activity2
+	1. Link Activity1 and Activity2
+        2. Take Symptoms and corresponsding rating and store in db
+        3. Assign zeros for symptoms not entered
+        4. Enter/Check all the 12 enteries data to database

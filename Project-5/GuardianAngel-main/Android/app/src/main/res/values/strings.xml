@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sample</string>
+    <string name="start_capture">Start Capture</string>
+    <string name="stop_capture">Stop Capture</string>
+    <string name="google_maps_api_key">AIzaSyDdDPi0u8A7daa0KFSOIezaP4B8-64DCP0</string>
+    <string name="from">From:(Origin)</string>
+    <string name="toLoc">To:(Destination)</string>
+    <string name="calc">Computing Road Condition.....</string>
+    <string name="title">Road Condition:</string>
+    <string name="poorRoad">Poor Road Condition</string>
+    <string name="normalRoad">Normal Road Condition</string>
+</resources>

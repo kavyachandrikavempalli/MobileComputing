@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg3"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/backCam"
+        android:layout_width="250dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+    </androidx.camera.view.PreviewView>
+
+    <TextView
+        android:id="@+id/tvRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recording..."
+        android:textColor="#FF0000"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/backCam"
+        app:layout_constraintEnd_toEndOf="@+id/backCam"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/backCam"
+        app:layout_constraintTop_toTopOf="@+id/backCam"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/btnRec"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/baseline_fiber_manual_record_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/backCam"
+        app:layout_constraintEnd_toEndOf="@+id/backCam"
+        app:layout_constraintStart_toStartOf="@+id/backCam" />
+
+    <Button
+        android:id="@+id/btnHr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Heart Rate"
+        app:icon="@drawable/ic_heart"
+        app:iconGravity="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backCam"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnRes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Respiration"
+        app:icon="@drawable/ic_heart"
+        app:iconGravity="end"
+        app:layout_constraintBottom_toBottomOf="@+id/btnHr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnHr"
+        app:layout_constraintTop_toTopOf="@+id/btnHr" />
+
+    <Button
+        android:id="@+id/btnSym"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Symptoms"
+        app:icon="@drawable/ic_next"
+        app:iconGravity="end"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpS"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvBsl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Blood Sugar Level:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHr" />
+
+    <TextView
+        android:id="@+id/tvBslVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bslSlider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvBsl"
+        app:layout_constraintTop_toTopOf="@+id/tvBsl" />
+
+    <com.google.android.material.slider.Slider
+        android:id="@+id/bslSlider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:value="100"
+        android:valueFrom="80"
+        android:valueTo="200"
+        app:layout_constraintEnd_toEndOf="@+id/tvBsl"
+        app:layout_constraintStart_toStartOf="@+id/tvBsl"
+        app:layout_constraintTop_toBottomOf="@+id/tvBsl" />
+
+    <Button
+        android:id="@+id/btnUpS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Upload Signs"
+        app:icon="@drawable/ic_upload"
+        app:iconGravity="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bslSlider"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvHr"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:text="Calculating..."
+        android:textColor="@color/white"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnHr"
+        app:layout_constraintStart_toStartOf="@+id/btnHr"
+        app:layout_constraintTop_toBottomOf="@+id/btnHr"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvRes"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:text="Calculating..."
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnRes"
+        app:layout_constraintStart_toStartOf="@+id/btnRes"
+        app:layout_constraintTop_toBottomOf="@+id/btnRes"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_record"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#009688"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_records"
+        android:tint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/float_add"
+        app:layout_constraintEnd_toEndOf="@+id/float_add"
+        app:layout_constraintStart_toStartOf="@+id/float_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_travel"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#009688"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_flight"
+        android:tint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/float_record"
+        app:layout_constraintEnd_toEndOf="@+id/float_record"
+        app:layout_constraintStart_toStartOf="@+id/float_record" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_schedule"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="#009688"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_schedule"
+        android:tint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/float_travel"
+        app:layout_constraintEnd_toEndOf="@+id/float_travel"
+        app:layout_constraintStart_toStartOf="@+id/float_travel" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/float_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#2196F3"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

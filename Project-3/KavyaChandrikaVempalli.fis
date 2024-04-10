@@ -1,0 +1,56 @@
+[System]
+Name='deceleration_B'
+Type='mamdani'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=12
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='deceleration'
+Range=[0 104]
+NumMFs=3
+MF1='low':'gaussmf',[19.8 0]
+MF2='medium':'gaussmf',[19.8 52.46]
+MF3='high':'gaussmf',[19.8 104]
+
+[Input2]
+Name='distance'
+Range=[-45 10]
+NumMFs=2
+MF1='near':'gaussmf',[17.5 -45]
+MF2='far':'gaussmf',[17.5 10]
+
+[Input3]
+Name='road_condition'
+Range=[-20 35]
+NumMFs=2
+MF1='poor':'gaussmf',[16.5 -20]
+MF2='normal':'gaussmf',[16.5 35]
+
+[Output1]
+Name='deceleration_B'
+Range=[0 300]
+NumMFs=3
+MF1='low':'gaussmf',[53.09 0]
+MF2='medium':'gaussmf',[53.07 150]
+MF3='high':'gaussmf',[53.05 300]
+
+[Rules]
+1 1 1, 2 (1) : 1
+1 1 2, 1 (1) : 1
+1 2 1, 1 (1) : 1
+1 2 2, 1 (1) : 1
+2 1 1, 3 (1) : 1
+2 1 2, 2 (1) : 1
+2 2 1, 2 (1) : 1
+2 2 2, 2 (1) : 1
+3 1 1, 3 (1) : 1
+3 1 2, 3 (1) : 1
+3 2 1, 3 (1) : 1
+3 2 2, 3 (1) : 1
